@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="wallet.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <nav class="navigation-container">
+      <img src="./asset/logo.png" class="logo" alt="" />
+      <img src="./asset/burger.svg" alt="" class="burger" />
+      <img src="./asset/close.svg" alt="" class="close none" />
+      <ul class="navigation-items none">
+        <li class="nav-item"><a href="./index.html">home</a></li>
+        <li class="nav-item">blog</li>
+        <li class="nav-item">bookmarks</li>
+      </ul>
+      <button class="login btn none">Login</button>
+    </nav>
+    <section class="login-content">
+      <div class="sidebar">
+        <img src="./asset/wallet-ico.svg" class="sidebar-image" alt="" />
+      </div>
+      <div class="main-page">
+        <h1 class="title">Connect a to wallet</h1>
+        <form action="">
+          <div class="container">
+            <label for="uname">Email</label>
+            <input
+              type="text"
+              placeholder="jon@email.com"
+              name="uname"
+              required
+            />
+            <button class="btn login-form" type="submit">Connect</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script>
+      const burger = document.querySelector(".burger");
+      const close = document.querySelector(".close");
+      const navigation = document.querySelector(".navigation-container");
+      const navigationItems = document.querySelector(".navigation-items");
+      const loginBtn = document.querySelector(".login");
+      burger.addEventListener("click", () => {
+        if (navigation.style.height === "5rem") {
+          navigation.style.height = "20rem";
+          navigationItems.classList.remove("none");
+          loginBtn.classList.remove("none");
+        } else {
+          navigation.style.height = "5rem";
+          navigationItems.classList.add("none");
+          loginBtn.classList.add("none");
+        }
+      });
+    </script>
+  </body>
+</html>

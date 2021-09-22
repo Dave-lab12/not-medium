@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Not Medium</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="navigation-container">
+        <img src="./asset/logo.png" class="logo" alt="" />
+        <img src="./asset/burger.svg" alt="" class="burger" />
+        <img src="./asset/close.svg" alt="" class="close none" />
+        <ul class="navigation-items none">
+          <li class="nav-item">home</li>
+          <li class="nav-item">blog</li>
+          <li class="nav-item">bookmarks</li>
+        </ul>
+        <button class="login btn none"><a href="./login.html">Login</a></button>
+      </nav>
+
+      <section class="trending-page">
+        <h1 class="title">trending</h1>
+        <article class="trending-article">
+          <img src="./asset/ios.jpg" alt="" />
+          <div class="content-head">
+            <p class="date">september 21,2021</p>
+            <h1>ios 15 and ipados 15 review</h1>
+            <p class="trending-paragraph">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+              dignissimos, quam consequatur mollitia iure est expedita totam
+              libero! Ducimus, magnam!
+            </p>
+          </div>
+        </article>
+      </section>
+      <section class="user-blogs">
+        <div class="cards-container">
+          <div class="card">
+            <img src="./asset/amazon.jpg" alt="" class="blog-img" />
+            <div class="content">
+              <p class="date">september 21,2021</p>
+              <h1 class="blog-header">
+                amazon leaks new kindle paper white with larger with 6.8-inch
+                display
+              </h1>
+              <p class="content-paragraph">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
+                totam fugiat tenetur ipsum in molestiae, omnis corporis
+                necessitatibus perspiciatis possimus.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./asset/hp.jpg" alt="" class="blog-img" />
+            <div class="content">
+              <p class="date">september 21,2021</p>
+              <h1 class="blog-header">
+                HP Elite Dragonfly Max review: pretty fly for a steep buy
+              </h1>
+              <p class="content-paragraph">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
+                totam fugiat tenetur ipsum in molestiae, omnis corporis
+                necessitatibus perspiciatis possimus.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./asset/gaming.jpg" alt="" class="blog-img" />
+            <div class="content">
+              <p class="date">september 21,2021</p>
+              <h1 class="blog-header">
+                Now the SEC is investigating Activision Blizzard too
+              </h1>
+              <p class="content-paragraph">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
+                totam fugiat tenetur ipsum in molestiae, omnis corporis
+                necessitatibus perspiciatis possimus.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./asset/surface.jpg" alt="" class="blog-img" />
+            <div class="content">
+              <p class="date">september 21,2021</p>
+              <h1 class="blog-header">
+                Microsoft gets ready to launch the Surface Pro 8 I’ve been
+                waiting years for
+              </h1>
+              <p class="content-paragraph">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
+                totam fugiat tenetur ipsum in molestiae, omnis corporis
+                necessitatibus perspiciatis possimus.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./asset/windows.jpg" alt="" class="blog-img" />
+            <div class="content">
+              <p class="date">september 21,2021</p>
+              <h1 class="blog-header">
+                How to fix Deathloop ‘stuttering’ issues on PC
+              </h1>
+              <p class="content-paragraph">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
+                totam fugiat tenetur ipsum in molestiae, omnis corporis
+                necessitatibus perspiciatis possimus.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./asset/facebok.jpg" alt="" class="blog-img" />
+            <div class="content">
+              <p class="date">september 21,2021</p>
+              <h1 class="blog-header">
+                The Oversight Board wants answers about Facebook’s celebrity
+                moderation program
+              </h1>
+              <p class="content-paragraph">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
+                totam fugiat tenetur ipsum in molestiae, omnis corporis
+                necessitatibus perspiciatis possimus.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <div class="footer-content">
+        <div class="logo-content">
+          <img src="./asset/logo-light.png" alt="" />
+          <h1>Not Medium</h1>
+        </div>
+        <div class="footer-links">
+          <a href="#">Home</a>
+          <a href="#">Blog</a>
+          <a href="#">BookMarks</a>
+        </div>
+        <button class="btn footer-btn">Login</button>
+      </div>
+    </footer>
+    <script>
+      const burger = document.querySelector(".burger");
+      const close = document.querySelector(".close");
+      const navigation = document.querySelector(".navigation-container");
+      const navigationItems = document.querySelector(".navigation-items");
+      const loginBtn = document.querySelector(".login");
+      burger.addEventListener("click", () => {
+        if (navigation.style.height === "5rem") {
+          navigation.style.height = "20rem";
+          navigationItems.classList.remove("none");
+          loginBtn.classList.remove("none");
+        } else {
+          navigation.style.height = "5rem";
+          navigationItems.classList.add("none");
+          loginBtn.classList.add("none");
+        }
+      });
+    </script>
+  </body>
+</html>
